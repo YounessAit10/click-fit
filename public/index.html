@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Click Fit</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Style personnalisé -->
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body class="bg-light">
+
+  <div class="container py-5 text-center">
+    <h1 class="display-4 fw-bold mb-4">🏋️ Click Fit</h1>
+    <p class="lead mb-5">Ton espace forme, fun et motivation !</p>
+
+    <!-- ✅ Zone API avec Jquery AJAX -->
+    <div id="factArea" class="alert alert-info shadow rounded p-3 mb-5" style="min-height: 80px;">
+      Chargement d'une info fitness en cours...
+    </div>
+
+    <!-- ✅ Formulaire d’upload -->
+   <div class="mt-5">
+  <h2 class="text-primary mb-4">📸 Uploader une image</h2>
+
+  <form id="uploadForm" enctype="multipart/form-data">
+    <div id="dropArea" 
+         class="upload-box border rounded p-5 bg-white shadow text-center" 
+         style="cursor: pointer; transition: background-color 0.3s ease; border: 3px dashed #6c757d;">
+      <p class="mb-3 fs-5 text-muted">
+        Glissez-déposez une image ici ou 
+        <label class="btn btn-outline-primary btn-sm">
+          <input type="file" name="image" id="imageInput" accept="image/*" hidden>
+          cliquez pour choisir
+        </label>
+      </p>
+      <small class="text-secondary">Formats supportés : JPG, PNG, GIF</small>
+    </div>
+
+    <button class="btn btn-success mt-4" type="submit">🚀 Envoyer</button>
+  </form>
+
+  <div id="preview" class="mt-4"></div>
+</div>
+
+
+
+  </div>
+
+  <!-- jQuery et Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script personnalisé -->
+  <script src="./js/main.js"></script>
+</body>
+</html>
